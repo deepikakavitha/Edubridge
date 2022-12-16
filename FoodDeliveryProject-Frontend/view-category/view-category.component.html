@@ -1,0 +1,33 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+
+<ul class = "nav navbar-nav">
+        <button onclick="history.back()"class="btn btn-primary navbar-btn">Go Back</button>      
+    
+</ul>
+<div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>categoryId</th>
+                <th>categoryName</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categoryList">
+                <td>{{category.categoryId}}</td>
+                <td>{{category.categoryName}}</td>
+                
+              
+              <td><button type="button" class="btn btn-info"(click)="addFood(category.categoryId)">AddFood</button></td> 
+               <td> <button type="button" class="btn btn-danger"(click)="deleteCategory(category.categoryId)">Delete</button> </td>
+              </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>

@@ -1,0 +1,33 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+
+<div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>CartId</th>
+                <th>Quantity</th>
+                 
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cart of cartList">
+                <td>{{cart.cartId}}</td>
+                <td>{{cart.quantity}}</td>
+                 
+                
+                
+               <td class="text-center"><button class="btn btn-danger btn-xs" (click)="removeFromCart(cart.cartId)"><span class="glyphicon glyphicon-remove"></span> Remove</button></td> 
+              </tr>
+        </tbody>
+        </table>
+        <div class="form-group">
+            <button (click)="addMoreItem()" class="btn btn-primary navbar-btn">Add More Items </button>
+            <input class="btn btn-success" type="submit" name="submit_reg" value="OrderItems" (click)="OrderItems()">
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,80 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+<ul class = "nav navbar-nav">
+    <button onclick="history.back()"class="btn btn-primary navbar-btn">Go Back</button>      
+
+</ul>
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Select You'er desired food <span class="req"><small>
+                                required *</small></span></legend>
+                                <!--<div class="form-group">
+                                    <label for="foodId"><span class="req">* </span> foodId <small>This will be your login user
+                                            foodId</small> </label>
+                                    <input required type="number" [(ngModel)]="food.foodId" name="foodId" id="foodId"
+                                        class="form-control phone"  placeholder="Enter your foodId..." />
+                                </div>!-->
+
+                    <div class="form-group">
+                        <label for="foodName"><span class="req">* </span> foodName: <small>This will be your login foodName
+                                </small> </label>
+                        <input required type="text" [(ngModel)]="food.foodName" name="foodName" id="foodName"
+                            class="form-control phone" maxlength="28" placeholder="Enter your foodName..." />
+                    </div>
+                    
+                   <!-- <div class="form-group">
+                        <label for="categoryId"><span class="req">* </span> categoryId: </label>
+                        <input class="form-control" type="number" [(ngModel)]="food.categoryId" name="categoryId" id="categoryId" required
+                            placeholder="Enter categoryId..." />
+                        <div id="errFirst"></div>
+                    </div>-->
+
+                    <div class="form-group">
+                        <label for="price"><span class="req">* </span> price : </label>
+                        <input class="form-control" type="number" [(ngModel)]="food.price" name="price" id="price"
+                            placeholder="Enter your price" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Add" (click)="addFood()">
+                    </div>
+                </fieldset>
+            </form>
+            
+        </div>
+
+    </div>
+</div> 
+<!--<div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>foodId</th>
+                <th>foodName</th>
+                <th>categoryId</th>
+                <th>price</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of foodList">
+                <td>{{food.foodId}}</td>
+                <td>{{food.foodName}}</td>
+                <td>{{food.categoryId}}</td>
+                <td>{{food.price}}</td>-->
+                
+               <!--<td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteUser(user.userId)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td> -->
+             <!-- </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>-->
+    

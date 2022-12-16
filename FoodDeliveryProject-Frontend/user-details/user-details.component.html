@@ -1,0 +1,60 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+
+<nav class="navbar navbar-expand-sm navbar-da" style="background-color:black">
+    <div class="container-fluid">    
+       
+    <ul class = "nav navbar-nav">
+        
+        
+        
+        <button onclick="history.back()"class="btn btn-primary navbar-btn">Go Back</button>      
+        
+    </ul>
+    <button (click)="logOut()"class="btn btn-danger navbar-btn">Log out</button>
+    </div>
+</nav>
+<h2 style="text-align:center">User Details</h2>
+
+<div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th>emailId</th>
+                <th>password</th>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>role</th>
+                <th>mobile_No</th>
+                <th>street</th>
+                <th>district</th>
+                <th>state</th>
+                <th>zipCode</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList">
+                <td>{{user.emailId}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.role}}</td>
+                <td>{{user.mobileNo}}</td>
+                <td>{{user.street}}</td>
+                <td>{{user.district}}</td>
+                <td>{{user.state}}</td>
+                <td>{{user.zipCode}}</td>
+                 
+                
+               <!--<td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteUser(user.userId)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td> -->
+              </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>
+
+
+

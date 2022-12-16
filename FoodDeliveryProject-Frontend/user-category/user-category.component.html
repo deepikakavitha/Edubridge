@@ -1,0 +1,40 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+
+<nav class="navbar navbar-expand-sm navbar-da" >
+<div class="container-fluid">    
+           <ul class = "nav navbar-nav">
+        
+        <button (click)="back()"class="btn btn-primary navbar-btn">Go Back</button>      
+        <button (click)="cart()"class="btn btn-primary navbar-btn">Go To Cart</button>  
+    </ul>
+   </div> 
+  </nav> 
+<div class="container">
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <h2 style="text-align: center;"class="fw-bold mb-5"><b style="color:rgb(0, 55, 205)" >Category</b></h2>
+        <table class="table table-striped custab">
+        <thead>
+            <tr>
+               <!-- <th>categoryId</th>!-->
+                <th>categoryName</th>
+                  
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categoryList">
+               <!-- <td>{{category.categoryId}}</td>!-->
+                <td>{{category.categoryName}}</td>
+                 
+                <td><button type="button" class="btn btn-info"(click)="viewFood(category.categoryId)">ViewFood</button></td> 
+
+               
+              </tr>
+        </tbody>
+        </table>
+        <button (click)="logOut()"class="btn btn-danger navbar-btn">Log out</button>
+        </div>
+    </div>
+
